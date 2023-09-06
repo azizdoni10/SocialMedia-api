@@ -1,0 +1,80 @@
+.LoginPage {
+  animation: animation ease-out 1s;
+  box-shadow: 0 0 20px #0750d0;
+  border-radius: 20px;
+  background-color: #00000082;
+  color: white;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  padding: 40px;
+  -moz-transform: translate(0px, -8px);
+  -webkit-transform: translate(0px, -8px);
+  -o-transform: translate(0px, -8px);
+  -ms-transform: translate(0px, -8px);
+  transform: translate(0px, -8px);
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    text-decoration: none;
+    color: var(--gray);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.parent__LoginPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@media (max-width: 530px) {
+  .LoginPage {
+    width: 100%;
+  }
+}
+
+@keyframes animation {
+  0%{
+    -moz-transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  100%{
+    -moz-transform: translate(0px, -8px);
+    -webkit-transform: translate(0px, -8px);
+    -o-transform: translate(0px, -8px);
+    -ms-transform: translate(0px, -8px);
+    transform: translate(0px, -8px);
+  }
+}
+
+.error-message-class {
+  color: red;
+  font-size: 17px;
+  margin: 2rem auto;
+}
+
+.greens{
+  color: rgb(0, 255, 0);
+  font-size: 20px;
+  padding-bottom: 20px;
+}

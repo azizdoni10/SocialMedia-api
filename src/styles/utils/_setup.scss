@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 530px;
+  margin: 0;
+  font-family: "Inter";
+
+  color: var(--text-color);
+}
+
+button,
+input {
+  border: 1px solid transparent;
+  outline: 0;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: var(--text-color);
+  }
+}
+
+._no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+button {
+  cursor: pointer;
+  padding: 12px 15px;
+  font-size: inherit;
+  border-radius: 10px;
+  background-color: var(--prime-color);
+  color: white;
+  transition: 200ms;
+
+  &:disabled {
+    background-color: var(--disabled-bgc);
+  }
+
+  &.primary {
+    background-color: blue;
+    color: white;
+  }
+
+  &.secondary {
+    background-color: var(--dark-gray);
+    color: white;
+  }
+
+  &:disabled:hover {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    transition: 1s;
+    background: #05b8f4 ;
+  }
+
+  &:focus {
+    transition: 2s ease-in-out;
+    background: #001eff ;
+  }
+
+  &:active {
+    transition: 2s ease-in-out;
+    background: #ff0000 ;
+  }
+}
+
+input {
+  padding: 12px 15px;
+  background-color: var(--bgc);
+  border-radius: 10px;
+  border: 1px solid transparent;
+
+  transition: 200ms;
+
+  &:is(:hover, :focus) {
+    border-color: var(--prime-color);
+  }
+}
+
+@media (max-width: 730px) {
+  input, button {
+    padding: 10px 12px;
+  }
+}
